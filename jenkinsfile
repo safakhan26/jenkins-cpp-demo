@@ -1,0 +1,13 @@
+pipeline{
+    agent any 
+    stage('Build'){
+        steps{
+            sh 'g++ main.cpp -o main'
+        }
+    }
+    stage('Run'){
+        steps{
+            sh './main'
+        }
+    }
+}
